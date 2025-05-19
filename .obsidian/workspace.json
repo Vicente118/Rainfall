@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "36bda8a0d0bbf6c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "e4ca23728d24bbe6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a69ebd56e7c1a782",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "level0/Ressources/Solve.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Solve"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4f081d46e228344c",
+    "type": "split",
+    "children": [
+      {
+        "id": "98d99986013e3ad2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "513be78707d82728",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorateur de fichiers"
+            }
+          },
+          {
+            "id": "a22e66286f340ec2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Rechercher"
+            }
+          },
+          {
+            "id": "16c6f99caeb8e7fe",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Signet"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "51bea50643df657e",
+    "type": "split",
+    "children": [
+      {
+        "id": "f414c9e58717ec82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b21c3799d14c0af3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "level0/Ressources/Solve.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Rétrolien pour Solve"
+            }
+          },
+          {
+            "id": "615397dc9d0f1744",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "level0/Ressources/Solve.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Liens sortants de Solve"
+            }
+          },
+          {
+            "id": "41b54834f2f79f27",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Mots-clés"
+            }
+          },
+          {
+            "id": "d89338cda36294da",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "level0/Ressources/Solve.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Plan de Solve"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer une nouvelle toile": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false
+    }
+  },
+  "active": "a69ebd56e7c1a782",
+  "lastOpenFiles": [
+    "level1/Ressources/Solve.md",
+    "level0/Ressources/Solve.md",
+    "level1/Ressources/level1",
+    "level1/Ressources",
+    "level1/flag",
+    "level1",
+    "level0/falg",
+    "level0/Ressources/level0"
+  ]
+}
