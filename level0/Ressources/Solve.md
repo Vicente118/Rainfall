@@ -1,4 +1,4 @@
-- We have a 32 bit ELF binary called level0 with SUID bit set, let's decompile de code:
+- We have a 32 bit ELF binary called level0 with SUID bit set, let's decompile the code:
 ```bash
 int32_t main(void* arg1)
 {
@@ -19,8 +19,10 @@ int32_t main(void* arg1)
 }
 ```
 
-- Ce code verifie si le premier argument donné au programme est different de 423 apres etre passe pas atoi()
-- Pour passer au dessus de la verification il faut simplement:
+----
+
+- This code verify that the first argument passed to the program then passed to atoi() is different than 423.
+- To go through this condition we just have to run the program like this:
 
 ```bash
 > ./level0 "423"
